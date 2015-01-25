@@ -60,11 +60,10 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
         inv <- x$getInverse()
-        # If the cached inverted matrix has a value, displaya proper message
+        # If the cached inverted matrix has a value, display a proper message
         # and return with the cached value
         if(!is.null(inv)) {
                 message("getting cached data")
-                #return(inv)
         } else {
                 data <- x$get()
                 inv <- solve(data, ...)
